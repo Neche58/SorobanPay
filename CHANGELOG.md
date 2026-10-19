@@ -16,6 +16,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- GitHub Actions workflow `.github/workflows/testnet-deploy.yml` for
+  automated testnet deployment on push to `main`: builds contract WASM,
+  deploys to testnet using the alice identity, saves the contract ID as a
+  workflow artifact, builds and deploys the frontend to Vercel with the
+  updated contract ID, and runs smoke tests against the deployed frontend.
+  Closes #1443.
+
 ### Changed
 
 ### Deprecated
